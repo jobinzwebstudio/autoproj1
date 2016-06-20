@@ -7,6 +7,7 @@ public class EnvVariables extends DOMnames {
 	static String Browser = "Firefox";
 	static String MAUsername = "02008819233@autocentral.com";
 	static String MAPassword = "password1";
+	static String TestDataSheet = "C:\\Users\\jobin\\Documents\\Project\\TestData.xlsx";
 	
 	
 

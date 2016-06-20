@@ -16,12 +16,20 @@ public class ReadExcelData {
 		
 		XSSFWorkbook wb = new XSSFWorkbook(fls);
 		
-		
 		XSSFSheet sheet1 = wb.getSheetAt(0);
 		
-		String data0 =sheet1.getRow(0).getCell(0).getStringCellValue();
 		
-		System.out.println(data0);
+		int rowcount = sheet1.getLastRowNum();
+		
+		
+		
+		for(int i=0; i<=rowcount;i++)
+		{
+		
+			String data0 =sheet1.getRow(i).getCell(0).getStringCellValue();
+			System.out.println("Test data from colum no."+i+"is : "+data0);
+			
+		}
 		
 		wb.close();
 
