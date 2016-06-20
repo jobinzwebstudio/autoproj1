@@ -3,8 +3,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 
 
 public class Verify_Latest_Bill_pages {
@@ -12,6 +10,9 @@ public class Verify_Latest_Bill_pages {
 	public static void main(String[] args)  {
 		
 		System.out.println("Opening the Browser");
+		
+		
+		
 		
 		
 		

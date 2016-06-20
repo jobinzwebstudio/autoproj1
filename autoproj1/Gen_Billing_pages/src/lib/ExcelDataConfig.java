@@ -9,27 +9,62 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelDataConfig {
 	
-	XSSFSheet sheet1 ;	
+	XSSFWorkbook wb;
+	
 	
 	public ExcelDataConfig()
 	{
-try {
-	File newfile = new File("C:\\Users\\jobin\\Documents\\Project\\TestData.xlsx");
+		try {
+			File newfile = new File("C:\\Users\\jobin.john\\Documents\\autoInput\\TestData.xlsx");
 			
 			FileInputStream fls = new FileInputStream(newfile);
 			
-			XSSFWorkbook wb = new XSSFWorkbook(fls);
-			
-			sheet1 = wb.getSheetAt(0);
-			
-			
-			
+			wb = new XSSFWorkbook(fls);
+					
 			wb.close();
 			
+			} 		
+		catch (Exception e) 
+		{
+			System.out.println("Esception occured while reading the excel sheet"+e);
+		}
+		
+	}
+	
+	
+	
+	
+	
+	public String ReadExcel(int sheet,int RowNo, int CellNo)
+	{
+		
+		XSSFSheet SelectedSheet ;
+		
+		SelectedSheet = wb.getSheetAt(sheet);
 
-} catch (Exception e) {
-	System.out.println("Esception occured while reading the excel sheet"+e);
-}
+		
+		String data = SelectedSheet.getRow(RowNo).getCell(CellNo).getStringCellValue();
+		
+		return data;
+		
+	}
+	
+	
+	
+	
+	
+	
+	public String WriteExcel(int sheet,int RowNo, int CellNo)
+	{
+		
+		XSSFSheet SelectedSheet ;
+		
+		SelectedSheet = wb.getSheetAt(sheet);
+
+		
+		String data = SelectedSheet.getRow(RowNo).getCell(CellNo).getStringCellValue();
+		
+		return data;
 		
 	}
 
