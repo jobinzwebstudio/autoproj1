@@ -22,6 +22,8 @@ public class ReadExcelData {
 		String data0 =sheet1.getRow(0).getCell(0).getStringCellValue();
 		
 		System.out.println(data0);
+		
+		wb.close();
 
 	}
 
